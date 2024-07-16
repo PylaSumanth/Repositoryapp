@@ -1,0 +1,22 @@
+.navbar{
+    background-color: rgb(229, 127, 255);
+    display: flex;
+    gap: 350px;
+    font-size: larger;
+}
+.Points{
+    display: grid;
+    grid-template-columns:auto auto auto;
+}
+.Boards{
+    border: 2px solid black;
+    border-radius:25px;
+    text-align: center;
+    margin:30px;
+}
+.footer{
+    background-color:rgb(130, 106, 0);
+    display:flex;
+    font-size: larger;
+    text-indent:1050px;
+}
