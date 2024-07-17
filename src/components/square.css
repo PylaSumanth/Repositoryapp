@@ -1,0 +1,24 @@
+.square-card{
+    width:100px;
+    height:100px;
+    background-color:orange;
+    margin-bottom: 20px;
+}
+.square-card1{
+    width:100px;
+    height:100px;
+    background-color:orangered;
+    margin-bottom: 20px;
+}
+.square-card2{
+    width:100px;
+    height:100px;
+    background-color:rgb(8, 65, 210);
+    margin-bottom: 20px;
+}
+.square-card3{
+    width:100px;
+    height:100px;
+    background-color:rgb(6, 107, 108);
+    margin-bottom: 20px;
+}

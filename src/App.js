@@ -8,12 +8,14 @@ import './App.css';
 // import "./stl.css";
 // import Conditionalrendering from './components/images.js/conditional';
 import Statename from './16thjuly/counterapp';
+import SquareComponent from './components/squaretask';
 
 const App=function(){
 
     // const arr=["Maha lakshmi","sumanth",""]
         return(
-            <Statename/>
+            // <Statename/>
+            <SquareComponent/>
             // <>
 
             // <Conditionalrendering sumanth={arr}/>
