@@ -9,15 +9,18 @@ import './App.css';
 // import Conditionalrendering from './components/images.js/conditional';
 import Statename from './16thjuly/counterapp';
 import SquareComponent from './components/squaretask';
-
+import IplData from './components/10/07/2024/Data';
+import Recipelist from './components/18thjuly/Fetchdata';
 const App=function(){
 
     // const arr=["Maha lakshmi","sumanth",""]
         return(
             // <Statename/>
-            <SquareComponent/>
+            // <IplData/>
+            <Recipelist/>
+           // <SquareComponent/>
             // <>
-
+        
             // <Conditionalrendering sumanth={arr}/>
             // </>
         )

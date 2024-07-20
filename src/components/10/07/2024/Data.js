@@ -1,39 +1,68 @@
-const IplData=[
+import React,{Component} from "react";
+import CustomProgressBar from "../../../Bootstrap/progress-bar";
+
+export default class IplData extends Component{
+    state={
+ IplData: [
     {
-    team:"Chennai Super Kings",
-    trophies:5,
-    jersey:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgWX7bxjeeY8_1g5R5QoNaCEyZaY5S8LkiQQ&s",
-    players:11,
+        id:1,
+        name:"CSK",
+        totalwincount: 5,
     },
     {
-    team:"Sun Risers Hyderabad",
-    trophies:2,
-    jersey:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKetjB90lyYhhiCSCh7DdGTKi7XJXG74VFpA&s",
-    players:11,
+    id:2,
+    name:"SRH",
+    totalwincount: 2,
     },
     {
-    team:"Rajasthan Royals",
-    trophies:1,
-    jersey:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGroBEKpBxYoN28lXnvSeKuArte2a4Ob1Jw&s",
-    players:11,
+    id:3,
+    name:"MI",
+    totalwincount: 5,
     },
-    {
-    team:"Mumbai Indians",
-    trophies:5,
-    jersey:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgk0if2W1-yqRi1vr1dCRrB71sh4X_TDd2CQ&s",
-    players:11,
-    },
-    {
-    team:"Lucknow Super Giants",
-    trophies:0,
-    jersey:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSh2s4KDGnqksk39uWYPfQOv_XqoCFjNmI2Q&s",
-    players:11,
-    },
-    {
-    team:"Delhi Capitals",
-    trophies:0,
-    jersey:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJF7Cw6WfYY2uRb4arw7HlWanbBjMmofWU3Q&s",
-    players:11,
-    },
-    ];
-export default IplData;
+  ],
+};
+calaculatePercentage=(input)=>{
+    const base=7;
+    const percentage=(input/base)*100;
+
+    return percentage;
+};
+handleclick=(targetId)=>{
+    const newstate=this.IplHandler(this.state.IplData,targetId);
+    this.setState({
+        IplData:newstate,
+    });
+};
+IplHandler=(Ipldata,targetTeamId)=>{
+    const updatedIplData=IplData.map((each)=>{
+                if(each.id===targetTeamId){
+                    return{ ...each, totalwincount: each.totalwincount +1 };
+                } else {
+                    return each;
+                }
+            });
+        return updatedIplData;
+        
+        };
+        render() {
+            return (
+                <div> 
+                    {this.state.IplData.map((each)=>{
+                        return(
+                    <>
+                    <h3>TeamName{each.name}</h3>
+                    <button onClick={()=>this.handleclick(each.id)}>
+                        click to increase wincount
+                    </button>
+                    <CustomProgressBar
+                    scale={this.calaculatePercentage(each.totalwincount)}
+                    />
+                    </>
+                        );
+                    })}
+                    </div>
+                    );
+                }
+            }
+
+    
