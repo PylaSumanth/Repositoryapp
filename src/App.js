@@ -1,17 +1,15 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import ShowGreeting from './Classcomponents/Hooks.js/twentythirdjuly';
-
-
-
+import FoodItems from './16thjuly/twentythirdjuly';
 
 
 const App = () => (
   <div>
     {/* <UseStateexample/> */}
 {/* <SampleComponent/> */}
-<ShowGreeting/>
+{/* <ShowGreeting/> */}
+<FoodItems/>
     </div>
 );
 
