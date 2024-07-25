@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import FoodItems from './16thjuly/twentythirdjuly';
+// import FoodItems from './16thjuly/twentythirdjuly';
+import UncontrolledForm from './Forms/uncontrolled/uncontrolled-form';
 
 
 const App = () => (
@@ -9,7 +10,8 @@ const App = () => (
     {/* <UseStateexample/> */}
 {/* <SampleComponent/> */}
 {/* <ShowGreeting/> */}
-<FoodItems/>
+{/* <FoodItems/> */}
+<UncontrolledForm/>
     </div>
 );
 
