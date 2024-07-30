@@ -7,21 +7,40 @@ import React from 'react';
 // import ControlledForm from './Forms/uncontrolled/ControlledForms';
 // import WeatherComponent from './Forms/uncontrolled/Weather';
 // import NavBar from './Forms/uncontrolled/navbar';
+// import CustomList from './Forms/uncontrolled/Customlist';
+// import NavigationStack from './Forms/uncontrolled/Navigation';
+// import RecipeDetail from './Forms/uncontrolled/Screen/Recipe-detailsscreen';
+// import InvalidScreen from './Forms/uncontrolled/Screen/InvalidScreen';
+// import UserScreen from './Forms/uncontrolled/Screen/UserScreen';
+// import Customspinner from './Forms/uncontrolled/Customspinner';
+// import DoctorsScreen from './Forms/uncontrolled/Screen/doctorScreen';
+// import Recipelist from './components/18thjuly/Fetchdata';
 import NavigationStack from './Forms/uncontrolled/Navigation';
+
 const App = () => (
   <div>
+
+
+<NavigationStack/>
+
     {/* <UseStateexample/> */}
 {/* <SampleComponent/> */}
 {/* <ShowGreeting/> */}
 {/* <FoodItems/> */}
-{/* <UncontrolledForm/> */}
-{/* <MobileComplaints/> */}
+{/* <UncontrolledForm/>
+<MobileComplaints/> 
 
-{/* <ControlledForm/> */}
-{/*<WeatherComponent/> */}
-{/* <NavBar/> */}
+<ControlledForm/>
+<WeatherComponent/>
+
+<CustomList />
 <NavigationStack/>
-
+<RecipeDetail/>
+<InvalidScreen/>
+<UserScreen/>
+<Customspinner/>
+<DoctorsScreen/> */}
+{/* <Recipelist/> */}
 </div>
 );
 

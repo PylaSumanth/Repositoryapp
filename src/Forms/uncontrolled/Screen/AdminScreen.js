@@ -1,12 +1,12 @@
 import NavBar from "../navbar"; 
 
-const AboutScreen = () => {
+const AdminScreen = () => {
     return (
         <>
         <NavBar/>
-        <h3>Welcome to AboutScreen</h3>
+        <h3>Welcome to AdminScreen</h3>
         </>
     );
 };
 
-export default AboutScreen;
+export default AdminScreen;

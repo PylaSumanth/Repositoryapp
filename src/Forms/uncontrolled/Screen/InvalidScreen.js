@@ -1,10 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import NavBar from "../navbar";
 
 const InvalidScreen = () => {
+    const navigate = useNavigate();
+
+    const navigateToHome = () => {  
+        navigate("/")
+    };
     return(
         <>
-        <NavBar/>
-        <h3>Welcome to InvalidScreen</h3>
+    
+        <h4> Invalid Screen 404 error </h4>
+        <button onClick={navigateToHome}>Go to Home</button>
         </>
     );
 };

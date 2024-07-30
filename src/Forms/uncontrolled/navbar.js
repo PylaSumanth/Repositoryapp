@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link , NavLink } from "react-router-dom";
 import "./navbar.css";
 
 const NavBar = () => {
@@ -24,7 +24,7 @@ const NavBar = () => {
           </li>
           <li className="nav-item">
             <NavLink to={"/settings"} style={linkStyle}>
-              Setting
+              Settings
             </NavLink>
           </li>
         </ul>
