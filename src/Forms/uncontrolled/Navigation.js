@@ -3,14 +3,14 @@ import Main from "../../components/Main";
 import About from "../../components/About";
 import Settings from "../../components/settings";
 import Blog from "../../components/Blog";
-import InvalidScreen from "./Screen/InvalidScreen";
+// import InvalidScreen from "./Screen/InvalidScreen";
 // import UserScreen from "./Screen/UserScreen";
 // import AdminScreen from "./Screen/AdminScreen";
 // import RecipeDetail from "./Screen/Recipe-detailsscreen";
 // import DoctorsScreen,{NewDoctors,OldDoctors} from "./Screen/doctorScreen";
 // import NavBar from "./navbar";
 
-const NavigationStack = () => {
+const NavigationStack=() => {
   return (
     <BrowserRouter>
     
@@ -20,7 +20,7 @@ const NavigationStack = () => {
         <Route path="/about" element={<About/>} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="*" element={<InvalidScreen />} />
+        {/* <Route path="*" element={<InvalidScreen />} /> */}
         {/* <Route path="users" element={<UserScreen />} />
 
         <Route path="doctors" element={<DoctorsScreen />}

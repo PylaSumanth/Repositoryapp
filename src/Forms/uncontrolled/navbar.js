@@ -27,6 +27,11 @@ const NavBar = () => {
               Settings
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink to={"/Recipes"} style={linkStyle}>
+              Recipes
+              </NavLink>
+              </li>
         </ul>
       </div>
     </nav>

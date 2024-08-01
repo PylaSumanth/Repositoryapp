@@ -15,12 +15,14 @@ import React from 'react';
 // import Customspinner from './Forms/uncontrolled/Customspinner';
 // import DoctorsScreen from './Forms/uncontrolled/Screen/doctorScreen';
 // import Recipelist from './components/18thjuly/Fetchdata';
+import RecipeFinder from './Forms/uncontrolled/RecipeFinder';
+
 import NavigationStack from './Forms/uncontrolled/Navigation';
 
 const App = () => (
   <div>
 
-
+<RecipeFinder/>
 <NavigationStack/>
 
     {/* <UseStateexample/> */}
