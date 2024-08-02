@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import UseReducer from './components/useReducer/useReducer';
 // import FoodItems from './16thjuly/twentythirdjuly';
 // import UncontrolledForm from './Forms/uncontrolled/uncontrolled-form';
 // import MobileComplaints from './Forms/uncontrolled/MobileComplaints'
@@ -15,15 +16,16 @@ import React from 'react';
 // import Customspinner from './Forms/uncontrolled/Customspinner';
 // import DoctorsScreen from './Forms/uncontrolled/Screen/doctorScreen';
 // import Recipelist from './components/18thjuly/Fetchdata';
-import RecipeFinder from './Forms/uncontrolled/RecipeFinder';
+// import RecipeFinder from './Forms/uncontrolled/RecipeFinder';
 
-import NavigationStack from './Forms/uncontrolled/Navigation';
+// import NavigationStack from './Forms/uncontrolled/Navigation';
 
 const App = () => (
   <div>
-
-<RecipeFinder/>
-<NavigationStack/>
+    <UseReducer/>
+{/* <UseReducer/> */}
+{/* <RecipeFinder/>
+<NavigationStack/> */}
 
     {/* <UseStateexample/> */}
 {/* <SampleComponent/> */}
