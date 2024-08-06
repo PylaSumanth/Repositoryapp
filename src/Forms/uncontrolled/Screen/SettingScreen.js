@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import NavBar from "../components/navbar/navbar";
-import { DataContext } from "../App";
+import NavBar from "../navbar";
+import { DataContext } from "../../../App";
 
 const SettingScreen = () => {
   const { username, darkMode, changeUsername, changeCount, counter } =

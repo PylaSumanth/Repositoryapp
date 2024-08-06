@@ -7,22 +7,35 @@ import "./Recipe-details.css"
 
 const RecipeDetail = () => {
   const { recipeId } = useParams();
-  const [recipeDetail, setRecipeDetail] = useState({});
+  const [recipeDetail, setRecipeDetail] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const fetchEachProduct = async () => {
+      try {
+        const { data } = await axios.get(`https://dummyjson.com/recipes/${recipeId}`);
+        setRecipeDetail(data);
+      } catch (err) {
+        console.error("Failed to fetch recipe details:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
     fetchEachProduct();
   }, [recipeId]);
 
-  const fetchEachProduct = async () => {
-    const { data } = await axios.get(
-      `https://dummyjson.com/recipes/${recipeId}`
+  if (loading) {
+    return (
+      <div className="spinner-container">
+        <Customspinner />
+        <h3 className="spinner-message">Please wait, data is loading....</h3>
+      </div>
     );
-    setRecipeDetail(data);
-  };
+  }
 
   return (
     <div className="recipe-detail-container">
-      {Object.keys(recipeDetail).length > 0 ? (
+      {recipeDetail ? (
         <>
           <h5 className="recipe-title">{recipeDetail.name}</h5>
           <h5 className="recipe-rating">Rating: {recipeDetail.rating}</h5>
@@ -49,10 +62,7 @@ const RecipeDetail = () => {
           <p>Reviews: {recipeDetail.reviewCount}</p>
         </>
       ) : (
-        <div className="spinner-container">
-          <Customspinner />
-          <h3 className="spinner-message">Please wait, data is loading....</h3>
-        </div>
+        <p>No details available</p>
       )}
     </div>
   );

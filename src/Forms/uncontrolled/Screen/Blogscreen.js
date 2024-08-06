@@ -1,12 +1,12 @@
-import NavBar from "../components/navbar/navbar";
-import UseReducer from "../components/useReducer/useReducer";
+import NavBar from "../navbar";
+import { useReducer } from "react";
 
 const BlogScreen = () => {
   return (
     <>
       <NavBar />
       <h3>Welcome to Blog Screen </h3>
-      <UseReducer />
+      {/* <UseReducer /> */}
     </>
   );
 };

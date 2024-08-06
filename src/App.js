@@ -1,52 +1,39 @@
-// import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import UseReducer from './components/useReducer/useReducer';
-// import FoodItems from './16thjuly/twentythirdjuly';
-// import UncontrolledForm from './Forms/uncontrolled/uncontrolled-form';
-// import MobileComplaints from './Forms/uncontrolled/MobileComplaints'
-// import ControlledForm from './Forms/uncontrolled/ControlledForms';
-// import WeatherComponent from './Forms/uncontrolled/Weather';
-// import NavBar from './Forms/uncontrolled/navbar';
-// import CustomList from './Forms/uncontrolled/Customlist';
-// import NavigationStack from './Forms/uncontrolled/Navigation';
-// import RecipeDetail from './Forms/uncontrolled/Screen/Recipe-detailsscreen';
-// import InvalidScreen from './Forms/uncontrolled/Screen/InvalidScreen';
-// import UserScreen from './Forms/uncontrolled/Screen/UserScreen';
-// import Customspinner from './Forms/uncontrolled/Customspinner';
-// import DoctorsScreen from './Forms/uncontrolled/Screen/doctorScreen';
-// import Recipelist from './components/18thjuly/Fetchdata';
-// import RecipeFinder from './Forms/uncontrolled/RecipeFinder';
 
-// import NavigationStack from './Forms/uncontrolled/Navigation';
 
-const App = () => (
-  <div>
-    <UseReducer/>
-{/* <UseReducer/> */}
-{/* <RecipeFinder/>
-<NavigationStack/> */}
+import React, { createContext, useState } from "react";
+// import UncontrolledForm from "./components/forms/uncontrolled/uncontrolled-form";
+// import ControlledForm from "./components/forms/controlled/controlled-form";
+// import WeatherComponent from "./components/weather/weather";
+import NavigationStack from "./Forms/uncontrolled/Navigation";
 
-    {/* <UseStateexample/> */}
-{/* <SampleComponent/> */}
-{/* <ShowGreeting/> */}
-{/* <FoodItems/> */}
-{/* <UncontrolledForm/>
-<MobileComplaints/> 
+export const DataContext = createContext();
 
-<ControlledForm/>
-<WeatherComponent/>
+const App = () => {
+  const [username, setUserName] = useState("sumanth");
+  const [darkMode, setDarkMode] = useState(true);
+  const [counter, setCounter] = useState(100);
 
-<CustomList />
-<NavigationStack/>
-<RecipeDetail/>
-<InvalidScreen/>
-<UserScreen/>
-<Customspinner/>
-<DoctorsScreen/> */}
-{/* <Recipelist/> */}
-</div>
-);
+  const changeUsername = (newName) => {
+    setUserName(newName);
+  };
+
+  const changeCount = (value) => {
+    setCounter(counter + value);
+  };
+
+  return (
+    <DataContext.Provider
+      value={{
+        username,
+        darkMode,
+        changeUsername,
+        counter,
+        changeCount,
+      }}
+    >
+      <NavigationStack />
+    </DataContext.Provider>
+  );
+};
 
 export default App;
-      
